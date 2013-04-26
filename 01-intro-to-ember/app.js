@@ -4,6 +4,7 @@ var App = Ember.Application.create({
 });
 
 setInterval(function() {
-  App.set('secondsViewed', App.get('secondsViewed') + 1);
+  var viewed = App.get('secondsViewed');
+  App.set('secondsViewed', viewed + 1);
 }, 1000);
 
