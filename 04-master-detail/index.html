@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.js"></script>
+  <script src="app.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <title>Ember 101</title>
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+
+    <div class="container">
+      <div class="row-fluid">
+        <ul class="nav nav-list span3 well">
+          {{#each model}}
+            <li>{{first}}</li>
+          {{/each}}
+        </ul>
+        <div class="span9 well"></div>
+      </div>
+    </div>
+
+  </script>
+
+</body>
+</html>
+
