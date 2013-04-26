@@ -3,9 +3,17 @@
 <head>
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.js"></script>
+  <script src="http://ryanflorence.com/ember.min.js"></script>
   <script src="app.js"></script>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+  <style>
+  img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  </style>
+
   <meta charset="utf-8" />
   <title>Ember 101</title>
 </head>
@@ -14,11 +22,19 @@
   <script type="text/x-handlebars">
     <ul class="nav well">
       {{#each model}}
-        <li>{{first}} {{last}}</li>
+        {{render "user" this}}
       {{/each}}
     </ul>
   </script>
 
+  <script type="text/x-handlebars" data-template-name="user">
+    <li>
+      <p>
+        <img {{bindAttr src="avatar"}} />
+        <b>{{first}} {{last}}</b>
+      </p>
+    </li>
+  </script>
 </body>
 </html>
 
