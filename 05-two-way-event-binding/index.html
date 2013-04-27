@@ -3,7 +3,7 @@
 <head>
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.js"></script>
+  <script src="http://ember101.com/jsbin/ember.rc3.js"></script>
   <script src="app.js"></script>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
   <meta charset="utf-8" />
@@ -37,6 +37,26 @@
       <dt>Last</dt>
       <dd>{{last}}</dd>
     </dl>
+    {{#linkTo "editUser" this class="btn btn-primary"}}Edit{{/linkTo}}
+  </script>
+
+  <script type="text/x-handlebars" id="editUser">
+    <h2>Edit User</h2>
+    <form class="form-inline">
+      <label>
+        First:
+        {{input type="text" value=first}}
+      </label><br>
+
+      <label>
+        Last:
+        {{input type="text" value=last}}
+      </label>
+
+      <div class="controls">
+        <button type="submit" class="btn btn-primary">Done</button>
+      </div>
+    </form>
   </script>
 
 </body>

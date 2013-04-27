@@ -2,6 +2,7 @@ var App = Ember.Application.create();
 
 App.Router.map(function() {
   this.resource('user', { path: '/users/:user_id' });
+  this.resource('editUser', { path: '/users/:user_id/edit' });
 });
 
 App.UserRoute = Ember.Route.extend({
