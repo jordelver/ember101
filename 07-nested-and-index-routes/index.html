@@ -3,7 +3,7 @@
 <head>
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.js"></script>
-  <script src="http://ember101.com/jsbin/ember.rc3.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.2/ember.js"></script>
   <script src="app.js"></script>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
   <meta charset="utf-8" />
@@ -22,10 +22,31 @@
 
 <script type="text/x-handlebars" id="about">
 <h2>About</h2>
+<ul>
+  <li>
+    {{#linkTo "about.location"}}Location{{/linkTo}}
+  </li>
+  <li>
+    {{#linkTo "about.product"}}Product{{/linkTo}}
+  </li>
+</ul>
+{{outlet}}
 </script>
 
 <script type="text/x-handlebars" id="login">
 <h2>Login</h2>
+</script>
+
+<script type="text/x-handlebars" id="about/location">
+<h3>Location</h3>
+</script>
+
+<script type="text/x-handlebars" id="about/product">
+<h3>Product</h3>
+</script>
+
+<script type="text/x-handlebars" id="about/index">
+<h3>Index</h3>
 </script>
 
 </body>
