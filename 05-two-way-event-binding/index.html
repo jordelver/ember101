@@ -42,7 +42,7 @@
 
   <script type="text/x-handlebars" id="editUser">
     <h2>Edit User</h2>
-    <form class="form-inline">
+    <form class="form-inline" {{action save on="submit"}}>
       <label>
         First:
         {{input type="text" value=first}}
