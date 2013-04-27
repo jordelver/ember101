@@ -27,6 +27,16 @@ App.EditUserRoute = Ember.Route.extend({
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
     return users;
+  },
+
+  events: {
+    createUser: function() {
+      var users = this.modelFor('application');
+      var user = users.pushObject({
+        id: users.length
+      });
+      this.transitionTo('editUser', user);
+    }
   }
 });
 

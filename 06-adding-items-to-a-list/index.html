@@ -16,6 +16,7 @@
     <div class="container">
       <div class="row-fluid">
         <ul class="nav nav-list span3 well">
+          <li><a href="#" {{action createUser}}>+ New User</a></li>
           {{#each model}}
             <li>{{#linkTo "user" this}}{{first}}{{/linkTo}}</li>
           {{/each}}
